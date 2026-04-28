@@ -9,7 +9,8 @@ export default function ProductDetails() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${id}`)
+    const apiBase = "/products";
+    fetch(`${apiBase}/${id}`)
       .then((r) => r.json())
       .then((data) => { setProduct(data); setLoading(false); });
   }, [id]);

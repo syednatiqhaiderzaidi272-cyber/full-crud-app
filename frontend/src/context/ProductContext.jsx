@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const BASE = "http://localhost:3000/products";
+const BASE = "/products";
 const ProductContext = createContext();
 
 export function ProductProvider({ children }) {

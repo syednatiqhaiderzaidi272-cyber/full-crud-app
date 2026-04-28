@@ -11,7 +11,8 @@ export default function EditProduct() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${id}`)
+    const apiBase = "/products";
+    fetch(`${apiBase}/${id}`)
       .then((r) => r.json())
       .then(({ title, price, description, category, brand, thumbnail, rating, stock }) =>
         setForm({ title, price, description, category, brand: brand || "", thumbnail, rating: rating || 0, stock: stock || 0 })
