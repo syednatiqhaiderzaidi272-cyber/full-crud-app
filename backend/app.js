@@ -6,6 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/products", productRoutes);
+app.use("/api/products", productRoutes);
 
 if (process.env.NODE_ENV !== "production") {
   app.listen(3000, () => console.log("Server running on http://localhost:3000"));
