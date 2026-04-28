@@ -11,7 +11,7 @@ export default function EditProduct() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    const apiBase = "/products";
+    const apiBase = import.meta.env.VITE_API_URL || "http://localhost:3000/products";
     fetch(`${apiBase}/${id}`)
       .then((r) => r.json())
       .then(({ title, price, description, category, brand, thumbnail, rating, stock }) =>
