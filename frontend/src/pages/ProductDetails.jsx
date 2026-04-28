@@ -9,7 +9,7 @@ export default function ProductDetails() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiBase = import.meta.env.VITE_API_URL || "http://localhost:3000/products";
+    const apiBase = import.meta.env.VITE_API_URL || "/api/products";
     fetch(`${apiBase}/${id}`)
       .then((r) => r.json())
       .then((data) => { setProduct(data); setLoading(false); });

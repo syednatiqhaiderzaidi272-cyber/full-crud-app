@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const BASE = import.meta.env.VITE_API_URL || "http://localhost:3000/products";
+const BASE = import.meta.env.VITE_API_URL || "/api/products";
 const ProductContext = createContext();
 
 export function ProductProvider({ children }) {
